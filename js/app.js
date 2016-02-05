@@ -18,13 +18,24 @@ $(document).ready(function() {
 	  function(){
 	  	$(this).hide();
 	  	$(this).css('left','520px');
-	  }
-	);
+	  });
 })
 .mouseup(function() {
 	$('.ryu-throwing').hide();
 	$('.ryu-ready').show();
+})
+.keydown(function(e) {
+	if (e.keyCode == 88) {
+		$('.ryu-cool').show();
+		$('.ryu-still').hide();
+	}
+})
 
+.keyup(function(e) {
+	if (e.keyCode == 88) {
+		$('.ryu-cool').hide();
+		$('.ryu-still').show();
+	}
 });
 });
 
